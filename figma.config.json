@@ -1,0 +1,10 @@
+{
+  "codeConnect": {
+    "parser": "react",
+    "language": "jsx",
+    "label": "React",
+    "include": ["src/**/*.figma.jsx"],
+    "exclude": ["dist/**", "node_modules/**"],
+    "interactiveSetupFigmaFileUrl": "https://www.figma.com/design/ZdLpMbsMvSqU3GJZGHpMm6/Untitled"
+  }
+}

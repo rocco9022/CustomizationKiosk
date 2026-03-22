@@ -1,0 +1,47 @@
+/**
+ * CSS variables aligned with design-system.json (resolved values).
+ * Update tokens.css when the JSON design system changes.
+ */
+:root {
+  /* Color — primitives */
+  --color-bbq-brown: #502314;
+  --color-mayo-egg-white: #f8f1e7;
+  --color-white: #ffffff;
+  --color-black-10: #0000001a;
+  --color-black-20: #00000033;
+
+  /* Color — functional */
+  --color-surface-white: #ffffff;
+  --color-surface-light: #f8f1e7;
+  --color-surface-dark: #502314;
+  --color-button-primary: #d62300;
+  --color-button-secondary: #502314;
+  --color-border-card: rgba(0, 0, 0, 0.1);
+  --color-alert-warning-light: #ffcfad;
+  --color-alert-success-light: #d4f7de;
+
+  /* Typography */
+  --font-display: 'Flame', 'Libre Baskerville', Georgia, serif;
+  --font-body: 'Flame Sans', 'Nunito Sans', system-ui, sans-serif;
+
+  --fs-6xl: 60px;
+  --fs-kiosk-h6: 48px;
+  --fs-button-lg: 40px;
+  --fs-heading-md: 32px;
+  --fs-header-sm: 28px;
+  --fs-body-md: 24px;
+  --fs-copy-sm: 20px;
+  --fs-body-lg: 18px;
+  --fs-caption: 16px;
+
+  --lh-tight: 1;
+  --lh-body: 1.5;
+
+  /* Layout */
+  --content-max: 1080px;
+  --addon-card-width: 464px;
+  --radius-pill: 100px;
+  --radius-card: 10px;
+  --radius-include: 15px;
+  --radius-badge: 8px;
+}

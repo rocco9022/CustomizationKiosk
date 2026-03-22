@@ -1,0 +1,147 @@
+{
+  "meta": {
+    "name": "RBI Kiosk / Meal Customization",
+    "source": "Figma file ZdLpMbsMvSqU3GJZGHpMm6, node 1:2551",
+    "version": "1.0.0",
+    "implementation": {
+      "cssVariables": "src/styles/tokens.css",
+      "assetsNote": "Remote Figma MCP asset URLs in src/data/figmaAssets.js expire after about 7 days; replace with permanent CDN or bundled assets for production."
+    }
+  },
+  "fonts": {
+    "display": {
+      "figma": "Flame Regular",
+      "fallbackStack": "'Flame', 'Libre Baskerville', Georgia, serif"
+    },
+    "body": {
+      "figma": "Flame Sans Regular",
+      "fallbackStack": "'Flame Sans', 'Nunito Sans', system-ui, sans-serif"
+    }
+  },
+  "color": {
+    "primitive": {
+      "bbqBrown": "#502314",
+      "mayoEggWhite": "#f8f1e7",
+      "white": "#ffffff",
+      "blackOpacity10": "#0000001a",
+      "blackOpacity20": "#00000033"
+    },
+    "functional": {
+      "surfacesWhite": "#ffffff",
+      "surfacesLight": "#f8f1e7",
+      "surfacesDark": "#502314",
+      "mainSurfacesBrandDark": "#502314",
+      "buttonPrimaryDefault": "#d62300",
+      "buttonSecondary": "#502314",
+      "bordersCard": "rgba(0, 0, 0, 0.1)",
+      "alertsWarningLight": "#ffcfad",
+      "alertsSuccessLight": "#d4f7de"
+    },
+    "semantic": {
+      "textDefault": "#502314",
+      "textButtonPrimary": "#ffffff",
+      "primary": "#d62300",
+      "default": "#502314",
+      "backgWhite": "#ffffff"
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "display": "Flame",
+      "body": "Flame Sans"
+    },
+    "fontWeight": {
+      "regular": 400
+    },
+    "scale": {
+      "captionTwo": { "fontSize": "16px", "lineHeight": "18px", "fontFamily": "{body}" },
+      "copySm20": { "fontSize": "20px", "lineHeight": "24px", "fontFamily": "{body}" },
+      "textBodyLg": { "fontSize": "18px", "lineHeight": "1.5", "fontFamily": "{body}" },
+      "textBodyMd": { "fontSize": "24px", "lineHeight": "28px", "fontFamily": "{body}" },
+      "headingButtonXs": { "fontSize": "24px", "lineHeight": "28px", "fontFamily": "{display}" },
+      "headerSm": { "fontSize": "28px", "lineHeight": "32px", "fontFamily": "{display}" },
+      "headingButtonMd": { "fontSize": "32px", "lineHeight": "38px", "fontFamily": "{display}" },
+      "headingButtonLg": { "fontSize": "40px", "lineHeight": "48px", "fontFamily": "{display}" },
+      "buttonLg": { "fontSize": "40px", "lineHeight": "40px", "letterSpacing": "0.01em", "fontFamily": "{display}" },
+      "kioskHeaderSix": { "fontSize": "48px", "lineHeight": "56px", "fontFamily": "{display}" },
+      "fontSize6xl": { "fontSize": "60px", "lineHeight": "normal", "letterSpacing": "-0.03px", "fontFamily": "{display}" },
+      "mealMeta": { "fontSize": "32px", "lineHeight": "normal", "fontFamily": "{body}" }
+    }
+  },
+  "layout": {
+    "contentMaxWidth": "1080px",
+    "addOnCardWidth": "464px",
+    "addOnCardGap": "32px",
+    "includeCardSize": "154px",
+    "heroImageSize": "640px",
+    "bottomNavHeight": "200px",
+    "globalFooterHeight": "80px"
+  },
+  "radii": {
+    "pill": "100px",
+    "card": "10px",
+    "includeCard": "15px",
+    "badge": "8px",
+    "iconButton": "120px"
+  },
+  "borders": {
+    "cardDefault": "2px solid rgba(0, 0, 0, 0.1)",
+    "cardSelected": "3px solid #502314",
+    "buttonOutline": "2px solid #502314",
+    "footerRule": "1px solid rgba(0, 0, 0, 0.2)"
+  },
+  "components": {
+    "buttonMain": {
+      "primary": {
+        "background": "{color.functional.buttonPrimaryDefault}",
+        "color": "{color.semantic.textButtonPrimary}",
+        "minHeight": "120px",
+        "paddingX": "40px",
+        "borderRadius": "{radii.pill}"
+      },
+      "secondary": {
+        "background": "transparent",
+        "color": "{color.primitive.bbqBrown}",
+        "border": "{borders.buttonOutline}",
+        "minHeight": "120px",
+        "paddingX": "40px",
+        "borderRadius": "{radii.pill}"
+      },
+      "ghost": {
+        "background": "transparent",
+        "color": "{color.primitive.bbqBrown}",
+        "minHeight": "56px",
+        "paddingX": "20px",
+        "borderRadius": "{radii.pill}"
+      }
+    },
+    "includeCard": {
+      "background": "rgba(80, 35, 20, 0.05)",
+      "borderRadius": "{radii.includeCard}",
+      "label": "{typography.scale.textBodyMd}"
+    },
+    "addOnCard": {
+      "padding": "24px",
+      "imageSize": "148px",
+      "title": "{typography.scale.headerSm}",
+      "meta": "{typography.scale.copySm20}"
+    },
+    "badge": {
+      "popular": {
+        "background": "{color.functional.alertsWarningLight}",
+        "text": "{color.primitive.bbqBrown}",
+        "typography": "{typography.scale.textBodyLg}"
+      },
+      "new": {
+        "background": "{color.functional.alertsSuccessLight}",
+        "text": "{color.primitive.bbqBrown}",
+        "typography": "{typography.scale.textBodyLg}"
+      },
+      "heavy": {
+        "background": "{color.functional.surfacesDark}",
+        "color": "{color.functional.surfacesLight}",
+        "typography": "{typography.scale.textBodyMd}"
+      }
+    }
+  }
+}
