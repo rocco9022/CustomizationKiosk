@@ -1,9 +1,9 @@
 /** Image URLs from Figma MCP export (expire after ~7 days — replace with hosted assets for production). */
 export const assets = {
   heroBackground:
-    'https://www.figma.com/api/mcp/asset/052e54b0-c81a-4f57-a8d4-222060b1e490',
+    'https://www.figma.com/api/mcp/asset/f6169b6f-2c10-4198-acd8-51898d535556',
   heroBurger:
-    'https://www.figma.com/api/mcp/asset/43068576-940f-4aef-9a46-cc65eb3e1d55',
+    'https://www.figma.com/api/mcp/asset/7a84fed5-6141-4f24-8bbf-3ce5f7929e8b',
   back: 'https://www.figma.com/api/mcp/asset/b91f9ae9-d9e2-40b3-96d2-b1895d3db468',
   forward: 'https://www.figma.com/api/mcp/asset/67b9269d-9738-4366-98e0-3056d85ff38a',
   accessible: 'https://www.figma.com/api/mcp/asset/68d40232-db35-4779-be30-4394bb971f14',

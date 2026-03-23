@@ -8,7 +8,7 @@ import styles from './MealCustomization.module.css';
 const ADD_ON_ITEMS = [
   { id: 'jalapenos', title: 'Jalapenos', meta: 'price', src: assets.jalapenos, badge: 'popular' },
   { id: 'bbq', title: 'BBQ Sauce', meta: 'price', src: assets.bbqSauce, badge: 'popular' },
-  { id: 'mustard', title: 'Mustard', meta: 'price', src: assets.mustard, badge: 'popular' },
+  { id: 'mustard', title: 'Mustard', meta: 'price', src: assets.mustard },
   { id: 'onionRings', title: 'Onion Rings', meta: 'price', src: assets.onionRings },
   {
     id: 'impossible',
@@ -18,15 +18,13 @@ const ADD_ON_ITEMS = [
   },
   { id: 'bun', title: 'Bun', meta: 'price', src: assets.bun },
   { id: 'plain', title: 'Make it Plain', meta: null, src: assets.makeItPlain },
-  { id: 'half', title: 'Cut in Half', meta: null, src: assets.cutInHalf },
-  { id: 'ketchup', title: 'Ketchup', meta: 'price', src: assets.ketchup, badge: 'popular' },
+  { id: 'half', title: 'Cut in Half', meta: null, src: assets.cutInHalf, badge: 'new' },
+  { id: 'ketchup', title: 'Ketchup', meta: 'price', src: assets.ketchup },
   {
     id: 'bacon-heavy',
     title: 'Bacon',
     meta: 'price',
     src: assets.bacon,
-    badge: 'popular',
-    heavy: true,
     defaultSelected: true,
   },
   {
@@ -34,7 +32,6 @@ const ADD_ON_ITEMS = [
     title: 'Lettuce',
     meta: 'price',
     src: assets.lettuce,
-    badge: 'new',
     defaultSelected: true,
   },
   {
@@ -56,7 +53,7 @@ const ADD_ON_ITEMS = [
     title: 'Pickles',
     meta: 'price',
     src: assets.pickles,
-    badge: 'popular',
+    imageFit: 'contain',
     defaultSelected: true,
   },
   {
@@ -64,7 +61,6 @@ const ADD_ON_ITEMS = [
     title: 'Mayo',
     meta: 'price',
     src: assets.mayo,
-    badge: 'popular',
     defaultSelected: true,
   },
 ];
@@ -77,11 +73,13 @@ function buildInitialSelection() {
   return initial;
 }
 
-export function IncludeCard({ label, src, onRemove }) {
+export function IncludeCard({ label, src, onRemove, imageFit }) {
   return (
     <div className={styles.includeCard}>
       <div className={styles.includeInner}>
-        <div className={styles.includeImage}>
+        <div
+          className={`${styles.includeImage} ${imageFit === 'contain' ? styles.includeImageContain : ''}`}
+        >
           <img alt="" src={src} />
         </div>
         <p className={styles.includeLabel}>{label}</p>
@@ -103,9 +101,9 @@ export function AddOnCard({
   meta,
   src,
   badge,
-  heavy,
   selected,
   onToggle,
+  imageFit,
 }) {
   return (
     <button
@@ -118,11 +116,10 @@ export function AddOnCard({
         <span className={`${styles.badge} ${styles.badgePopular}`}>Popular</span>
       )}
       {badge === 'new' && <span className={`${styles.badge} ${styles.badgeNew}`}>New</span>}
-      {heavy && (
-        <span className={`${styles.badge} ${styles.badgeHeavy}`}>Heavy</span>
-      )}
       <div className={styles.addonRow}>
-        <div className={styles.addonImage}>
+        <div
+          className={`${styles.addonImage} ${imageFit === 'contain' ? styles.addonImageContain : ''}`}
+        >
           <img alt="" src={src} />
         </div>
         <div className={styles.addonCopy}>
@@ -191,6 +188,7 @@ export default function MealCustomization() {
                   key={item.id}
                   label={item.title}
                   src={item.src}
+                  imageFit={item.imageFit}
                   onRemove={() => removeIncludeByAddonId(item.id)}
                 />
               ))
@@ -209,7 +207,7 @@ export default function MealCustomization() {
                 meta={item.meta}
                 src={item.src}
                 badge={item.badge}
-                heavy={item.heavy}
+                imageFit={item.imageFit}
                 selected={addonSelection[item.id]}
                 onToggle={() => toggleAddon(item)}
               />

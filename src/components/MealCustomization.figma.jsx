@@ -33,7 +33,6 @@ figma.connect(
         meta="price"
         src={assets.jalapenos}
         badge="popular"
-        heavy={false}
         selected={false}
         onToggle={() => {}}
       />
